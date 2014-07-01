@@ -6,6 +6,13 @@ html-front-template
 
 本项目为笔戈科技开发团队前端开发模板。方便快速进行项目开发，打包发布。
 
+#使用方式
+
+```
+	git clone https://github.com/kissliux/html-front-template.git
+```
+
+
 #前端技术
 
 * html5
