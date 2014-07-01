@@ -1,0 +1,21 @@
+/* < 960px*/
+@media screen and (max-width: @screen-md-min) { 
+
+	h1{
+		color: #0f0;
+	}
+}
+/* < 768px */
+@media screen and (max-width: 48em) { 
+
+	h1{
+		color: #f00;
+	}
+}
+/* < 480px */
+@media screen and (max-width: 36em) { 
+	h1{
+		color: #00f;
+	}
+
+}

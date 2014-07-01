@@ -1,0 +1,32 @@
+{
+  "name": "bg-web-template",
+  "version": "1.0.0",
+  "authors": [
+    "liu.xing <kissliux@qq.com>"
+  ],
+  "description": "笔戈前端开发模板",
+  "main": "default.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "web",
+    "template",
+    "css",
+    "html"
+  ],
+  "license": "MIT",
+  "homepage": "kissliux.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "lazyload": "~2.1.1"
+  }
+}
