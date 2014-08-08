@@ -1,23 +1,20 @@
 {
-  "name": "bg-web-template",
+  "name": "front-end-template",
   "version": "1.0.0",
   "authors": [
-    "liu.xing <kissliux@qq.com>"
+    "orangehat <orangehat.rb@gmail.com>"
   ],
-  "description": "笔戈前端开发模板",
-  "main": "default.html",
-  "moduleType": [
-    "node"
-  ],
+  "description": "front-end-template",
   "keywords": [
-    "web",
-    "template",
     "css",
-    "html"
+    "less",
+    "js",
+    "mobile-first",
+    "responsive",
+    "front-end"
   ],
   "license": "MIT",
-  "homepage": "kissliux.github.io",
-  "private": true,
+  "homepage": "about.me/orangehat",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -26,7 +23,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.2.0",
-    "lazyload": "~2.1.1"
+    "jquery": ">= 1.9.0"
   }
 }
