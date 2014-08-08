@@ -1,86 +1,75 @@
-html-front-template
-===================
+# [Bigertech front-end template](http://bigertech.com)
+[![Bower version](https://badge.fury.io/bo/bootstrap.svg)](http://badge.fury.io/bo/bootstrap)
+[![NPM version](https://badge.fury.io/js/bootstrap.svg)](http://badge.fury.io/js/bootstrap)
+[![Build Status](https://secure.travis-ci.org/twbs/bootstrap.svg?branch=master)](http://travis-ci.org/twbs/bootstrap)
+[![devDependency Status](https://david-dm.org/twbs/bootstrap/dev-status.svg)](https://david-dm.org/twbs/bootstrap#info=devDependencies)
 
-# 简介
+## Quick start
 
-前端开发模板，自动化任务管理。html5 development template, auto task manager
+Three quick start options are available:
 
-本项目为笔戈科技开发团队前端开发模板。方便快速进行项目开发，打包发布。
-
-# 使用方式
-
-```
-git clone https://github.com/kissliux/html-front-template.git
-```
-
-
-# 前端技术
-
-* html5
-* bootstrap 3 模板
-* jquery
-* lazyload
-* less
-* grunt
-* bower
+- [Download the latest release](https://github.com/bigertech/front-end-template.zip).
+- Clone the repo: `git clone https://github.com/bigertech/front-end-template.git`.
+- Install with [Bower](http://bower.io): `bower install bigertech`.
 
 
+### What's included
 
-## grunt任务：
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
 ```
-grunt.registerTask('default', ['less','cssmin','uglify','copy']);
-//执行 grunt bundle --最终输出的文件 < name-生成日期.zip > 文件
-grunt.registerTask('bundle', ['clean:pre','less:development','copy:images', 'copy:main','cssmin','copy:archive', 'clean:post','htmlmin','compress',]);
- ```
-
- * clean 清理文档格式
- * less 编译成css
- * cssmin css压缩
- * uglify js文件压缩
- * compress 压缩成 .zip文件
- * copy 把所有资源文件拷贝到 build目录，方便项目发布到CDN
-
-
-
-# 文档结构
-
-```
-├── Gruntfile.js   //任务配置
-├── assets      //静态资源
-│   ├── css
-│   │   ├── base.less    //公用样式
-│   │   ├── ie    //IE兼容性问题解决
-│   │   │   └── index-ie.css
-│   │   ├── index.css    //less编译后生成文件
-│   │   ├── index.less    //主页样式
-│   │   └── media      //媒体查询  响应式
-│   │       └── index-media.css
-│   ├── images    //图片资源
-│   │   ├── favicon.ico
-│   │   └── sprite    //图片精灵（多个小图放到一张大图里面，减少请求次数）
-│   └── js    //javascript脚本
-│       ├── base.js    //公用脚本
-│       └── index.js    //主页脚本
-├── bower.json    //包管理文件
-├── build    //打包发布的文件，经过了编译、拼接，压缩等处理后的目录
-├── index.html    //主页
-└── package.json
-
+Front-End-Template/
+├── less/
+├── js/
+├── img/
+├── fonts/
+└── dist/
+    ├── css/
+    ├── js/
+    ├── img/
+    └── fonts/
+├── bower.json
+├── package.json  
+└── gulpfile.js
 ```
 
-# Development
+## Compiling CSS and JavaScript
+Bigertech uses [Gulp](https://github.com/gulpjs/gulp) for its build system, with convenient methods for working with the framework. It's how we compile our code, run tests, and more.
 
-安装依赖
-
+### install dependences
 ```
-npm install
 bower install
 ```
+```
+npm install
+```
 
-打包发布
+### install Gulp
+```
+npm install -g gulp
+```
+
+### Run gulp
+```
+gulp          // 完成 Less 编译，css、js、图像压缩合并与检验
+```
 
 ```
-grunt
+gulp clean    // 清理开发时不需要的文件
+```
 
+```
+gulp less     // 将 Less 转换成 CSS，以及压缩 CSS
+```
+
+```
+gulp scripts  // 验证、合并、压缩 js 文件
+```
+
+```
+gulp images   // 压缩图片
+```
+
+```
+gulp watch   // 默认监测所有前端开发文件的变化
 ```
