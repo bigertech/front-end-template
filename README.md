@@ -8,7 +8,7 @@
 
 Three quick start options are available:
 
-- [Download the latest release](https://github.com/bigertech/front-end-template.zip).
+- [Download the latest release](https://codeload.github.com/bigertech/front-end-template/zip/master).
 - Clone the repo: `git clone https://github.com/bigertech/front-end-template.git`.
 - Install with [Bower](http://bower.io): `bower install bigertech`.
 
