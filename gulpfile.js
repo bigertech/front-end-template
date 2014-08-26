@@ -36,12 +36,12 @@ gulp.task('clean', function() {
 
 
 // 将 Less 转换成 CSS，以及压缩 CSS
-gulp.task('less', ['clean'], function() {
+gulp.task('less', function() {
 	return gulp.src(paths.less)
 	.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(cssmin())
-		.pipe(rename({ suffix: '.min' }))
+		.pipe(rename('bigertech.min.css'))
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(paths.less_dist))
 	.pipe(notify({ message: 'Less task complete' }));
@@ -49,12 +49,12 @@ gulp.task('less', ['clean'], function() {
 
 
 // 验证、合并、压缩 js 文件
-gulp.task('scripts', ['clean'], function() {
+gulp.task('scripts', function() {
 	return gulp.src(paths.scripts)
 	.pipe(sourcemaps.init())
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'))
-		.pipe(concat('main.min.js'))
+		.pipe(concat('bigertech.min.js'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
 	.pipe(gulp.dest(paths.scripts_dist))
@@ -63,7 +63,7 @@ gulp.task('scripts', ['clean'], function() {
 
 
 // 压缩图片
-gulp.task('images', ['clean'], function() {
+gulp.task('images', function() {
 	return gulp.src(paths.images)
 	.pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
 	.pipe(gulp.dest(paths.images_dist))
@@ -79,4 +79,4 @@ gulp.task('watch', function() {
 });
 
 // 默认 gulp 任务
-gulp.task('default', ['watch', 'less', 'scripts', 'images']);
+gulp.task('default', ['clean', 'watch', 'less', 'scripts', 'images']);
