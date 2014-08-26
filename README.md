@@ -26,7 +26,7 @@ Front-End-Template/
 └── dist/
     ├── css/
     ├── js/
-    ├── img/
+    ├── images/
     └── fonts/
 ├── bower.json
 ├── package.json  
